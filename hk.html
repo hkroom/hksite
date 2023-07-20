@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Venda - HK's Kit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .confirmation-container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .confirmation-message {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .confirm-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .modal {
+            max-width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Confirmação de Venda</h1>
+        <img class="product-image" src="https://i.pinimg.com/originals/27/b8/1a/27b81a1de9985130af2e56f5919dec17.jpg" alt="KIT LACOSTE COM RELOGIO E PULSEIRA 18K">
+        <p>Produto: KIT LACOSTE COM RELOGIO E PULSEIRA 18K</p>
+        <p>Valor: 150,00 R$</p>
+        <p>Feita Por: Tiago Lucente</p>
+        <button class="confirm-button" onclick="showConfirmationMessage()">Confirmar</button>
+    </div>
+
+    <!-- Modal de confirmação -->
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <h2>PEDIDO CONFIRMADO</h2>
+            <p>Obrigado por comprar conosco!</p>
+            <button class="confirm-button" onclick="closeConfirmationMessage()">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        function showConfirmationMessage() {
+            document.getElementById("overlay").style.display = "flex";
+        }
+
+        function closeConfirmationMessage() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</body>
+</html>
